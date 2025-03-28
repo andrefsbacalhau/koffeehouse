@@ -1,0 +1,258 @@
+@import '../utils/fonts';
+@import '../utils/align';
+@import '../utils/colors';
+@import '../utils/media_queries';
+
+.about{
+    height: 100%;
+    min-height: 100vh;
+    @include flexCenter;
+    flex-direction: column;
+    box-shadow: 0px 0px -30px;
+    z-index: 20;
+    position: relative;
+    padding: 1rem 0;
+       
+    img{
+        @include fullSize;
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0px 0px 10px 0px black;
+        filter: brightness(.3);
+        z-index: -1;
+    }
+    
+    &__content{
+        width:90%;
+        padding-top: 5rem;
+        @include flexCenter;
+        flex-direction: column;
+        margin-bottom: 5rem;
+        
+        .title{
+            color: white;
+            font-family: $normal-font;
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            
+            span{
+                color: $green;  
+            }            
+        }
+
+        .text{
+            backdrop-filter: blur(3px);
+            padding: 1rem 1rem;
+            .paragraph{
+                color: white;
+                font-family: $normal-font;
+                font-size: 1.7rem;
+                text-align: center;
+                letter-spacing: .1rem;
+                
+                .brand{
+                    font-family: $logo-font;
+                    font-size: 3rem;
+                    font-weight: 900;
+                    color: $lightBrown;
+                }
+            } 
+        }
+
+    }
+
+    &__contact{
+        @include flexCenter;
+        flex-direction: column;
+        
+        
+        &__title{
+            color: white;
+            font-family: $normal-font;
+            font-size: 1.5rem;
+            font-weight: normal;
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 1rem;
+        }
+
+        &__info{
+            color: white;
+            @include flexCenter;
+            flex-direction: column;
+            
+            p{
+                font-size: 1.5rem;
+                margin-bottom: .7rem;
+                font-family: $normal-font;
+            }
+
+            .socials{
+                @include flexCenter;
+                gap: 1rem;
+
+                i{
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    
+            
+        
+    
+
+        
+           @include tabletSmall{    
+            height: 100%;
+            min-height: 100vh;
+        
+            .seasonal{
+                
+        
+                 &__left{
+        
+                    &__title{
+                        width: 100%;
+                        
+                    }
+                    img{
+                        display: none;
+                    }
+                 }
+        
+                 &__right{
+                    
+        
+                    .menu__items{
+                        width: 700px;
+                        
+                        .menu__item{
+        
+                            margin-bottom: 2rem;
+                            
+        
+                            h1{
+                                font-size: 2rem;
+        
+                                span{
+                                    
+                                    font-size: 1.5rem;
+                                    opacity: .7;
+                                }
+                            }
+        
+                            &__price{
+                                font-family: $normal-font;
+                                text-align: end;
+                                font-size: 1.2rem;
+                            }
+                        }
+        
+                        .note {
+                            font-family: $normal-font;
+                            text-align: end;
+                            font-size: 1.2rem;
+                        }
+        
+                        
+                    }
+           
+                 }
+            }
+           }
+        
+           @include mobileBig{    
+            
+        
+            .seasonal{
+                
+        
+                 &__left{           
+        
+                    &__title{
+                        width: 100%;
+                        font-size: 2rem;
+        
+                        span{
+                            font-size: 2rem;
+                        }
+                    }
+                    img{
+                        display: none;
+                    }
+                 }
+        
+                 &__right{
+                    
+        
+                    .menu__items{
+                        width: 700px;
+                        padding: 1rem 1rem;
+        
+                        .menu__item{
+        
+                            margin-bottom: 1rem;
+                            
+        
+                            h1{
+                                font-size: 1.6rem;
+        
+                                span{
+                                    
+                                    font-size: 1.4rem;
+                                    opacity: .7;
+                                }
+                            }
+        
+                            &__price{
+                                font-family: $normal-font;
+                                text-align: end;
+                                font-size: 1rem;
+                            }
+                        }
+        
+                        .note {
+                            font-family: $normal-font;
+                            text-align: end;
+                            font-size: 1rem;
+                        }
+        
+                        
+                    }
+           
+                 }
+            }
+           }
+        
+           @include mobileSmall{    
+        
+            .about__content{
+                .title{
+                    font-size: 2.5rem;
+                }
+                
+            }
+           }
+        
+           @include mobileMin{
+        
+            .seasonal{
+                padding: 2rem 0;
+                &__left{
+                    display: none;
+                    
+                }
+        
+                &__right{
+                    margin-top: 4rem;
+                }
+            }
+        
+           }    
+    
+}

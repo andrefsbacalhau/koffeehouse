@@ -1,0 +1,382 @@
+@import '../utils/fonts';
+@import '../utils/align';
+@import '../utils/colors';
+@import '../utils/media_queries';
+
+
+//Hot section container
+.hot__container{
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient($lightHot,$darkHot);
+    position: relative;
+    z-index: 9;
+    
+    //Overlay to be shown only on mobile devices
+    &__overlay{
+        display: none;
+    }
+
+    //Hot section content
+    .hot{
+        @include fullSize;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;   
+         
+        //Left side on desktop screen and Top side on mobile
+        &__left{
+        @include fullSize;
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+            //Left side background, disappears (display:none) on mobile
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                position: absolute;
+                z-index: -1;
+                opacity: .7;
+                filter: brightness(.6);
+            }
+            
+            //Full title
+            &__title{
+                font-size: clamp(1.5rem, calc(2vw + 1rem), 5rem);
+                position: absolute;
+                color: white;
+                opacity: .8;
+                font-family: $logo-font;
+                text-align: center;
+                padding: 0 3rem;
+                
+                //Personalized spams (colored letters)
+                span{
+                    font-size: clamp(1.5rem, calc(2vw + 1rem), 4rem);
+                    color: $mediumHot;
+                    text-shadow: 2px 1px black;
+                    font-family: $normal-font;         
+                }        
+            }        
+        }
+
+        //Right side on desktop screen and Bottom side on mobile
+        &__right{
+            @include fullSize;
+            @include flexCenter;
+            padding: 2rem 0;
+
+            //Menu container
+            .menu__items{
+                padding: 2rem 2rem ;
+                display: flex;
+                flex-direction: column;
+                z-index: 10;
+                color:white;
+                font-family: $logo-font;
+                border: 1px solid white;             
+                
+                //Menu item (one unit)
+                .menu__item{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 1.2rem;
+                    
+                    //Item name
+                    h1{
+                        font-size: 1.8rem;
+
+                        //Item description
+                        span{
+                            font-size: 1.5rem;
+                            opacity: .7;
+                        }
+                    }
+
+                    //Item price
+                    &__price{
+                        font-family: $normal-font;
+                        text-align: end;
+                        font-size: 1rem;
+                    }
+                }
+
+                // * at the end of the menu
+                .note {
+                    font-family: $normal-font;
+                    text-align: end;
+                    font-size: 1rem;
+                }
+
+                
+            }
+        }  
+    }
+
+
+    //RESPONSIVENESS
+
+    // SCREEN WIDTH < 1024px
+    @include tabletBig{    
+        min-height: 100vh;
+        height: 100%;
+    
+        //Display Mobile overlay image
+        &__overlay{
+            display: grid;
+            position: absolute;
+            @include fullSize;
+            object-fit: cover;
+            opacity: .7;
+            filter: brightness(.6);
+        }
+    
+        //Hot section content
+        .hot{
+            padding-top: 5rem;
+            flex-direction: column;
+            row-gap: 5rem;         
+             
+            //Top side on mobile
+             &__left{
+                
+                &__title{
+                    width: 100%;
+                }
+
+                //Disabling left side background image
+                img{
+                    display: none;
+                }
+             }
+
+             //Bottom side on mobile
+             &__right{
+                padding: 1rem 1rem;
+    
+                //Menu container
+                .menu__items{
+                    padding: 2rem 2rem ;
+                    width: 700px;
+                    
+                    //Menu item (one unit)
+                    .menu__item{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 2rem;
+                        
+                        //Item name
+                        h1{
+                            font-size: 2.5rem;
+    
+                            //Item description
+                            span{
+                                font-size: 2rem;
+                                opacity: .7;
+                            }
+                        }
+    
+                        //Item price
+                        &__price{
+                            font-family: $normal-font;
+                            text-align: end;
+                            font-size: 1.5rem;
+                        }
+                    }
+    
+                    // * at the end of the menu
+                    .note {
+                        font-family: $normal-font;
+                        text-align: end;
+                        font-size: 1.5rem;
+                    }
+    
+                    
+                }
+       
+             }
+        }
+       }
+    
+    // SCREEN WIDTH < 768px
+    @include tabletSmall{    
+
+        //Hot section content
+        .hot{
+
+            //Bottom side on mobile
+            &__right{
+            
+                //Menu container
+                .menu__items{
+                    
+                    //Menu item (one unit)
+                    .menu__item{
+
+                        //Item name
+                        h1{
+                            font-size: 2rem;
+                            
+                            //Item description
+                            span{
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        //Item price
+                        &__price{
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    // * at the end of the menu
+                    .note {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // SCREEN WIDTH < 700px
+    @include mobileBig{    
+    
+        //Hot section content
+        .hot{
+            
+            //Top side on mobile
+            &__left{           
+
+                //Full title
+                &__title{
+                    font-size: 2rem;
+
+                    //Personalized spams (colored letters)
+                    span{
+                        font-size: 2rem;
+                    }
+                }
+
+            }
+
+            //Bottom side on mobile
+            &__right{
+                
+                //Menu container
+                .menu__items{
+                    padding: 1rem 1rem;
+
+                    //Menu item (one unit)
+                    .menu__item{
+                        margin-bottom: 1rem;
+                        
+                        //Item name
+                        h1{
+                            font-size: 1.6rem;
+
+                            //Item description
+                            span{   
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        //Item price
+                        &__price{
+                            font-size: 1rem;
+                        }
+                    }
+
+                    // * at the end of the menu
+                    .note {
+                        font-size: 1rem;
+                    }                    
+                }
+            }
+        }
+    }
+
+    // SCREEN WIDTH < 576px
+    @include mobileSmall{  //  
+
+        //Hot section container
+        .hot{
+            
+            //Top side on mobile
+            &__left{
+                
+                //Full title
+                &__title{
+                    font-size: 1.7rem;
+                    
+                    //Personalized spams (colored letters)
+                    span{
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+
+            //Bottom side on mobile
+            &__right{
+                
+                //Menu container
+                .menu__items{
+                    padding: .5rem .5rem;
+
+                    //Menu item (one unit)
+                    .menu__item{
+                        margin-bottom: clamp(1rem, 1vw, 1.5rem);
+                        
+                        //Item name
+                        h1{
+                            font-size: 1.7rem;
+
+                            //Item description
+                            span{        
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        //Item price
+                        &__price{
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    // * at the end of the menu
+                    .note {
+                        font-size: 1rem;
+                    }  
+                }
+            }
+        }
+    }
+
+    // SCREEN WIDTH < 390px
+    @include mobileMin{
+
+        //Hot section container
+        .hot{
+            padding: 1rem 0;
+            
+            //Disabling Top side on mobile 
+            &__left{
+                display: none;
+            }
+
+            //Adjusting Bottom side (Menu side)
+            &__right{
+                margin-top: 4rem;
+            }
+        }
+
+    }
+}
+

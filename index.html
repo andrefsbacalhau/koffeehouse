@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>KoffeeHouse</title>
+</head>
+<body>
+
+    <!--Navbar section-->
+    <nav class="navbar">
+        <div class="navbar__logo"><a href="#home">KoffeeHouse</a></div>
+        <div class="navbar__menu">
+            <a href="#hot" class="nav__item">Hot</a>
+            <a href="#cold" class="nav__item">Cold</a>
+            <a href="#seasonal" class="nav__item">Seasonal</a>
+            <a href="#eat" class="nav__item">To Eat</a>
+            <a href="#about" class="nav__item">About us</a>
+            <a href="#contact" class="nav__item">Contacts</a>
+        </div>
+        <div class="navbar__mobile__button">
+            <i class="fa-solid fa-bars show-menu"></i>
+        </div>
+        
+        <div class="navbar__mobile__menu hide">
+            <i class="fa-solid fa-xmark close-menu"></i>
+            <video src="/images/drinks.mp4" loop muted autoplay ></video>
+            <div class="nav__items">
+                <a href="#home" class="nav__item"><i class="fa fa-home" aria-hidden="true"></i></a>
+                <a href="#hot" class="nav__item">Hot</a>
+                <a href="#cold" class="nav__item">Cold</a>
+                <a href="#seasonal" class="nav__item">Seasonal</a>
+                <a href="#eat" class="nav__item">To Eat</a>
+                <a href="#about" class="nav__item">About us</a>
+                <a href="#contact" class="nav__item">Contacts</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!--Hero Section-->
+    <section class="hero" id="home">
+        <img src="/images/coffeeshop.jpg" alt="">
+        <div>
+            <h1>Come by...</h1>
+            <h1>Spend time with us...</h1>
+            <h1>Or grab & go.</h1>
+        </div>
+        <div>
+            <button><a href="#about">Know more</a></button>
+        </div>
+    </section> 
+
+    <!--Hot Section-->
+    <section class="hot__container" id="hot">
+            <img class="hot__container__overlay" src="/images/hot_coffee.jpg" alt="">
+            <div class="hot"> 
+                <div class="hot__left">
+                    <h1 class="hot__left__title"><span>Warm yourself</span> with the hottest drinks on <span>our menu.</span></h1>
+                    <img src="/images/hot_coffee.jpg" alt=""> 
+                </div>
+                <div class="hot__right">
+                    <div class="menu__items">
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Expresso <br><span>(Full coffee)</span></h1>
+                            <span class="menu__item__price">2,99€</span>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Choco & Milk <br><span>(Hot chocolate with milk)</span></h1>
+                            <span class="menu__item__price">3,99€</span>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Ginger Choco <br><span>(Ginger bread, chocolate, milk)</span></h1>
+                            <span class="menu__item__price">5,99€</span>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Milky One <br><span>(Milk and coffee)</span></h1>
+                            <span class="menu__item__price">3,99€</span>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Caramel Macchiato <br><span>(Coffee, caramel and milk)</span></h1>
+                            <span class="menu__item__price">4,99€</span>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Your Own <br><span>(You choose the mix from local items)*</span></h1>
+                            <span class="menu__item__price">2,99€</span>
+                        </div>
+                        <p class="note">*1,70€ per drink, 1€ per topping, 1€ per extra</p>
+                    </div>
+                </div> 
+            </div>
+    </section>
+
+    <!--Cold Section-->
+    <section class="cold__container" id="cold">
+        <img class="cold__container__overlay" src="/images/cold_drink.jpg" alt="">
+        <div class="cold">
+            <div class="cold__left">
+                <h1 class="cold__left__title"><span>Ice is ready,</span> pick the freshest drink on <span>our menu.</span></h1>
+                <img src="/images/cold_drink.jpg" alt="">
+            </div>
+            <div class="cold__right">
+                <div class="menu__items">
+                    <div class="menu__item">
+                        <h1 class="menu__item__name">Mojito <br><span>(Rum, soda, lime juice and mint)</span></h1>
+                        <p class="menu__item__price">6,99€</p>
+                    </div>
+                    <div class="menu__item">
+                        <h1 class="menu__item__name">Lemonade <br><span>(Lemon juice, mint and water)</span></h1>
+                        <p class="menu__item__price">3,99€</p>
+                    </div>
+                    <div class="menu__item">
+                        <h1 class="menu__item__name">Caipirinha <br><span>(Liquor, lime and brown sugar)</span></h1>
+                        <p class="menu__item__price">6,99€</p>
+                    </div>
+                    <div class="menu__item">
+                        <h1 class="menu__item__name">Ice Tea Feeling<br><span>(Cold Ice, lemon and peach flavour)</span></h1>
+                        <p class="menu__item__price">3,99€</p>
+                    </div>
+                    <div class="menu__item">
+                        <h1 class="menu__item__name">Cali Cocktail <br><span>(Vodka, orange juice, currant and sugar)</span></h1>
+                        <p class="menu__item__price">5,99€</p>
+                    </div>
+                    <div class="menu__item">
+                        <h1 class="menu__item__name">Icy pick <br><span>(You choose the mix from local items)*</span></h1>
+                        <p class="menu__item__price">3,99€</p>
+                    </div>
+                    <p class="note">*1,50€ per drink, 1€ per topping</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seasonal Section-->
+    <section class="seasonal__container" id="seasonal">
+            <img class="seasonal__container__overlay" src="/images/seasonal_bg2.jpg" alt="">
+            <div class="seasonal">
+                <div class="seasonal__left">
+                    <h1 class="seasonal__left__title"><span>It's about time</span> to get some special drinks from <span>the x-mas season!</span></h1>
+                    <img src="/images/seasonal_bg2.jpg" alt="">
+                </div>
+                <div class="seasonal__right">
+                    <div class="menu__items">
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Eggnog <br><span>(Brandy, cream, eggs and vanilla)</span></h1>
+                            <p class="menu__item__price">4,99€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Gluhwein <br><span>(Red wine, brandy, orange and spices)</span></h1>
+                            <p class="menu__item__price">6,99€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Hot Buttered Rum <br><span>(Rum, spices, cinnamon and nutmeg)</span></h1>
+                            <p class="menu__item__price">6,99€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Iced Mocha <br><span>(Chocolate milk, coffee and whipped cream)</span></h1>
+                            <p class="menu__item__price">6,99€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Hot Ginger Lemonade <br><span>(Lemon, ginger and honey)</span></h1>
+                            <p class="menu__item__price">5,99€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">My X-mas mix <br><span>(You choose the mix from local items)*</span></h1>
+                            <p class="menu__item__price">3,99€</p>
+                        </div>
+                        <p class="note">*1,50€ per drink, 1€ per topping</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--To Eat Section-->
+    <section class="eat__container" id="eat">
+            <img class="eat__container__overlay" src="/images/eat_bg.jpg" alt="">
+            <div class="eat">
+                <div class="eat__left">
+                    <h1 class="eat__left__title"><span>Out of the hoven,</span> pick your side-kick from <span>the menu.</span></h1>
+                    <img src="/images/eat_bg.jpg" alt="">
+                </div>
+                <div class="eat__right">
+                    <div class="menu__items">
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Chocolate Cookie <br><span>(The simple cookie with chocolate bits)</span></h1>
+                            <p class="menu__item__price">0,99€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Berry Cookie <br><span>(Cookie with berries jam)</span></h1>
+                            <p class="menu__item__price">1,49€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Salted Caramel Cookie <br><span>(Cookie wih salted caramel)</span></h1>
+                            <p class="menu__item__price">1,49€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Chocolate Croissant <br><span>(Croissant stuffed with hot chocolate)</span></h1>
+                            <p class="menu__item__price">1,49€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Red Velvet Cake Slice <br><span>(Fresh slice of red velvet cake)</span></h1>
+                            <p class="menu__item__price">1,99€</p>
+                        </div>
+                        <div class="menu__item">
+                            <h1 class="menu__item__name">Bread with anything <br><span>(You choose the mix)*</span></h1>
+                            <p class="menu__item__price">0,70€</p>
+                        </div>
+                        <p class="note">*0,30€ per extra</p>
+                    </div>
+                </div>
+            </div>
+    </section> 
+
+    <!--About Section-->
+    <section class="about" id="about">
+        <img src="/images/eco_coffee.jpg" alt=""> 
+        <div class="about__content">
+            <h1 class="title">We're <span>eco</span>-friendly!</h1>
+            <div class="text">
+                <p class="paragraph">&nbsp;&nbsp;Besides using recyclable or reusable items and having a zero waste policy, we make sure that every drop of coffee served to you in our establishments, present a sustainable agricultural model that will pioneer California-grown coffee. <br>&nbsp;&nbsp;As the climate changes more drastically and supply chain issues make it so the tropical regions where coffee has traditionally grown can’t keep up with demand, so some of our suppliers decided to grow coffee as locally as they could.</p>
+                <p class="paragraph">&nbsp;&nbsp;Using a agroforestry model, they plant different crops next to each other so they benefit each other. <br>For example, they grow avocado trees next to the coffee trees to shade them and protect them from weather while the coffee trees provide the soil with nutrients the avocado trees wouldn’t get otherwise. It’s a perfect symbiotic relationship that results in a more sustainable way to grow coffee and we, <span class="brand">KoffeHouse</span>, are very supportive of it! <i class="fa-solid fa-mug-hot mug"></i></p>
+            </div>
+        </div>
+        <div class="about__contact" id="contact">
+            <h1 class="about__contact__title">Contact Us</h1>
+            <div class="about__contact__info">
+                <p>(+351) 967176163</p>
+                <p>andrefsbacalhau@gmail.com</p>
+                <div class="socials">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-google"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/60efc185d6.js" crossorigin="anonymous"></script>
+</body>
+</html>
